@@ -19,6 +19,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using Visionet.Form.Commons.Extensions;
 using Visionet.Form.Commons.RequestHandlers.Employees;
+using Visionet.Form.Commons.RequestHandlers.Transactions;
 using Visionet.Form.Commons.Services;
 using Visionet.Form.Commons.Services.AutomaticMigrations;
 using Visionet.Form.Commons.Validations.Employees;
@@ -152,7 +153,9 @@ namespace Microsoft.Extensions.Hosting
             //services.AddValidatorsFromAssemblyContaining<CandidateListValidator>();
             //services.AddValidatorsFromAssemblyContaining<AddAppliedPositionValidator>();
             services.AddMediatR(typeof(CreateEmployeeHandler));
+            services.AddMediatR(typeof(CreateTransactionHandler));
             services.AddTransient<CreateEmployeeHandler>();
+            services.AddTransient<CreateTransactionHandler>();
             //services.AddTransient<CandidateFormValidation>();
             //services.AddTransient<CandidateService>();
             //services.AddTransient<BlobInformationHandler>();

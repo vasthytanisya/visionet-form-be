@@ -44,6 +44,7 @@ namespace Visionet.Form.Entities
         }
         public DbSet<Employee> Employees => Set<Employee>();
         public DbSet<Skill> Skills => Set<Skill>();
+        public DbSet<Transaction> Transactions => Set<Transaction>();
         public DbSet<DataProtectionKey> DataProtectionKeys => Set<DataProtectionKey>();
     }
 }
